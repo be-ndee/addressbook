@@ -1,4 +1,3 @@
-import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.lang.Exception;
 import java.sql.*;
@@ -155,8 +154,8 @@ public class Address {
         statement.setString(9, this.city);
         statement.setString(10, this.postcode);
         statement.setString(11, this.country);
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
-        statement.setString(12, formatter.format(this.birthday));
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        statement.setString(12, format.format(this.birthday));
 
         int affectedRows = statement.executeUpdate();
         // set the id
@@ -170,6 +169,7 @@ public class Address {
             } else {
                 throw new SQLException("Insert failed, no ID obtained.");
             }
+            generatedKeys.close();
         }
 
         statement.close();
