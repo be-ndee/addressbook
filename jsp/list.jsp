@@ -2,7 +2,7 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
 <t:layout pageTitle="Addresslist">
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Name</th>
