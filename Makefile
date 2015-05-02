@@ -3,3 +3,6 @@ build:
 	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/*.java
 	../../bin/startup.sh
 
+bower:
+	bower install
+	bower update
