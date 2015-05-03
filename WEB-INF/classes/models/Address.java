@@ -1,3 +1,5 @@
+package models;
+
 import java.text.SimpleDateFormat;
 import java.lang.Exception;
 import java.sql.*;
