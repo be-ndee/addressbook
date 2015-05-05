@@ -29,11 +29,11 @@
     <url-pattern>/delete</url-pattern>
   </servlet-mapping>
   <servlet>
-    <servlet-name>Create</servlet-name>
-    <servlet-class>controller.Create</servlet-class>
+    <servlet-name>Save</servlet-name>
+    <servlet-class>controller.Save</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Create</servlet-name>
-    <url-pattern>/create</url-pattern>
+    <servlet-name>Save</servlet-name>
+    <url-pattern>/save</url-pattern>
   </servlet-mapping>
 </web-app>

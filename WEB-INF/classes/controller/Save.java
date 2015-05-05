@@ -11,9 +11,11 @@ import models.Address;
 import java.sql.Date;
 import java.util.Calendar;
 
-public class Create extends HttpServlet {
+public class Save extends HttpServlet {
     @Override
     public void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        int id = Integer.parseInt(request.getParameter("id"));
+
         String name = request.getParameter("name");
         String christianname = request.getParameter("christianname");
 
@@ -38,6 +40,7 @@ public class Create extends HttpServlet {
         Date birthday = new Date(calendar.getTimeInMillis());
 
         Address address = new Address();
+        // TODO fetch existing address
         address.setName(name);
         address.setChristianname(christianname);
 
