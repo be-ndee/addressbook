@@ -14,6 +14,6 @@ bower:
 	bower update
 
 compile:
-	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/*.java
-	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/models/*.java
-	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/controller/*.java
+	javac -cp .:../../lib/servlet-api.jar:WEB-INF/classes WEB-INF/classes/*.java
+	javac -cp .:../../lib/servlet-api.jar:WEB-INF/classes WEB-INF/classes/models/*.java
+	javac -cp .:../../lib/servlet-api.jar:WEB-INF/classes WEB-INF/classes/controller/*.java
