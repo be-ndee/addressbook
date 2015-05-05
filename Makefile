@@ -16,3 +16,4 @@ bower:
 compile:
 	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/*.java
 	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/models/*.java
+	javac -cp .:../../lib/servlet-api.jar WEB-INF/classes/controller/*.java
