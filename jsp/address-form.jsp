@@ -6,7 +6,13 @@
 <jsp:useBean id="address" scope="page" class="models.Address"></jsp:useBean>
 
 <t:layout pageTitle="Address form">
-    <form class="form-horizontal">
+    <form class="form-horizontal" action="/addressbook/save" method="POST">
+        <fg:hidden property="id" value="${address.id}"></fg:hidden>
+        <fg:select property="addressform" text="Addressform">
+            <fg:option text="-" value=""></fg:option>
+            <fg:option text="Herr" value="herr"></fg:option>
+            <fg:option text="Frau" value="frau"></fg:option>
+        </fg:select>
         <fg:text property="name" text="Name" value="${address.name}"></fg:text>
         <fg:text property="christianname" text="Christianname" value="${address.christianname}"></fg:text>
         <fg:text property="email" text="Email" value="${address.email}"></fg:text>
@@ -17,7 +23,9 @@
         <fg:text property="city" text="City" value="${address.city}"></fg:text>
         <fg:text property="street" text="Street" value="${address.street}"></fg:text>
         <fg:number property="number" text="Number" value="${address.number}"></fg:number>
-        <fg:text property="birthday" text="Birthday" value="${address.birthday}"></fg:text>
+        <fg:number property="birthdayDate" text="Birth Day" value="${address.birthday}"></fg:number>
+        <fg:number property="birthdayMonth" text="Birth Month" value="${address.birthday}"></fg:number>
+        <fg:number property="birthdayYear" text="Birth Year" value="${address.birthday}"></fg:number>
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
                 <button type="submit" class="btn btn-default">Save</button>
