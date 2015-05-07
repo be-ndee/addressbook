@@ -1,2 +1,2 @@
 # jsp-addressbook
-A Addressbook written in JSP
+An Addressbook written in JSP
