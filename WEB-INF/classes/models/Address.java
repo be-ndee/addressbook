@@ -133,6 +133,7 @@ public class Address {
     public Address () {
     }
 
+    // Save the bean to the database
     public void save () throws Exception {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/addressbook?user=addressbook&password=addressbook");
@@ -180,5 +181,34 @@ public class Address {
 
     public void fill (ResultSet resultSet) {
 
+    }
+
+    // Fill this object with the data for the address-id
+    public void read (int id) throws Exception {
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/addressbook?user=addressbook&password=addressbook");
+        
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM " + this.tableName + " WHERE id=" + id + ";");
+
+        if (resultSet.next()) {
+            this.setId(id);
+            this.setName(resultSet.getString("name"));
+            this.setChristianname(resultSet.getString("christianname"));
+            this.setAddressform(resultSet.getString("addressform"));
+            this.setEmail(resultSet.getString("email"));
+            this.setPhone(resultSet.getString("phone"));
+            this.setMobile(resultSet.getString("mobile"));
+            this.setStreet(resultSet.getString("street"));
+            this.setNumber(resultSet.getInt("number"));
+            this.setCity(resultSet.getString("city"));
+            this.setPostcode(resultSet.getString("postcode"));
+            this.setCountry(resultSet.getString("country"));
+            this.setBirthday(resultSet.getDate("birthday"));
+        }
+
+        resultSet.close();
+        statement.close();
+        connection.close();
     }
 }
