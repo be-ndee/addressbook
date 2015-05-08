@@ -19,7 +19,7 @@
                 <td>max.mustermann@example.com</td>
                 <td>02351/23725</td>
                 <td>
-                    <a href="#" class="btn btn-primary btn-xs glyphicon glyphicon-pencil"></a>
+                    <a href="address-form.jsp" class="btn btn-primary btn-xs glyphicon glyphicon-pencil"></a>
                     <a href="/addressbook/delete?id=1" class="btn btn-danger btn-xs glyphicon glyphicon-trash"></a>
                 </td>
             </tr>
