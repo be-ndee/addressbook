@@ -71,10 +71,10 @@ public class Save extends HttpServlet {
             address.setBirthday(birthday);
 
             address.save();
+
         } catch (Exception ex) {
             // TODO Invalid print to user
-            response.getWriter().write("Invalid parameters");
-            response.getWriter().write(ex.getMessage());
         }
+        response.sendRedirect("jsp/address.jsp");
     }
 }
