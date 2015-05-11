@@ -1,8 +1,9 @@
+package models;
+
 import java.lang.Exception;
 import java.sql.*;
 import java.sql.PreparedStatement;
 import java.util.ArrayList;
-
 
 public class AddressList {
 
