@@ -22,8 +22,8 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="list.jsp">List</a></li>
                     </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container-fluid -->
+                </div>
+            </div>
         </nav>
 
         <div class="container">
